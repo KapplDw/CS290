@@ -1,0 +1,100 @@
+
+nav .nav-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+}
+nav ul{
+    display: none;
+}
+.box{
+    background-color: white;
+    margin:5px 0;
+}
+.box p{
+    padding:15px;
+}
+header{
+    background-image: url(https:/via.placeholder.com/1900x1250?text=bannerbg);
+    background-size: cover;
+    background-position: center center;
+    /*padding replaces height*/
+    padding: 100px 0;
+}
+header {
+    text-align: center;
+}
+header h1{
+    font-size: 20px;
+    color:white;
+}
+header h3{
+    color:white;
+    font-style: italic;
+    font-weight: normal;
+}
+.btn-warning{
+    background-color:#FEC013;
+}
+#services{
+    text-align: center;
+    padding:20px;
+}
+#services .p-trans{
+    color:rgba(0, 0, 0, 0.2);
+}
+#services i.fa-circle{
+    color:#FEC013;
+}
+#services i.fa-stack-1x{
+    color:white;
+}
+
+#menu{
+    text-align: center;
+    padding:30px;
+    background-color: rgb(220, 220, 220);
+}
+#order{
+    text-align: center;
+    padding:20px;
+}
+#order.box{
+    text-align: right;
+}
+footer i.fa-circle{
+    color:white;
+}
+footer i.fa-stack-1x{
+    color:black;
+}
+footer .apps{
+    font-size: 3px;
+}
+footer a{
+    color: #FEC013;
+}
+@media only screen and (min-width:1000px) {
+    nav .nav-btn{
+        display: none;
+    }
+    nav ul{
+        display: block;
+    }
+    header h1{
+        font-size: 75px;
+    }
+}
+
+@media only screen and (min-width:501px) and (max-width:999px) {
+    nav .nav-btn{
+        display: none;
+    }
+    nav ul{
+        display: block;
+    }
+    header h1{
+        font-size: 40px;
+    }
+}

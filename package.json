@@ -1,0 +1,32 @@
+{
+  "name": "final-project-final-project-team-31",
+  "version": "1.0.0",
+  "description": "Final project",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "handlebars": "^4.7.6",
+    "node": "^14.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "handlebars views/partials/menu_item.handlebars -f public/menu_item.js",
+    "prestart": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osu-cs290-sp20/final-project-final-project-team-31.git"
+  },
+  "keywords": [
+    "Final"
+  ],
+  "author": "Dwight Kappl, Tarren Meyers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osu-cs290-sp20/final-project-final-project-team-31/issues"
+  },
+  "homepage": "https://github.com/osu-cs290-sp20/final-project-final-project-team-31#readme"
+}
