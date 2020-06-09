@@ -1,0 +1,284 @@
+/*----------------------------------------*/
+/*-----------CAL CSS FRAMEWORK------------*/
+/*----------------------------------------*/
+/*
+
+This is a CSS framework built at The Center for Advance learning (CAL) within Web Development classes. This framework focuses on a building a lightweight, grid-based, responsive design. There are also additional helper classes to expedite the development process. The following sections are included in this framework:
+
+    1. Global Styles
+    2. Typography
+    3. Buttons
+    4. Callouts
+    5. Responsive Navbar
+    6. Layout
+
+This framework borrows styles and designs from the Bootstrap framework and the W3Schools.
+
+*/
+
+/*-------GLOBAL STYLES-----------*/
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/*-----------TYPOGRAPHY---------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 3px 0; /*Reduce defualt margins*/
+}
+a {
+    text-decoration: none; /*Remove the underline from ALL links*/
+}
+
+.text-shadow{
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+/*line seperator*/
+.line-seperator{
+    overflow: hidden;
+    text-align: center;
+}
+.line-seperator:before, .line-seperator:after {
+    background-color: white;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+    margin: 20px, 0;
+}
+
+.line-seperator:before{
+    right: .5em;
+    margin-left: -50%;
+}
+
+.line-seperator:after{
+    left: .5em;
+    margin-right: -50%;
+}
+/*--------------BUTTONS---------------*/
+/*buttons*/
+.btn{
+    padding: 8px;
+    display: inline-block;
+    border-radius: 5px;
+    color:white;
+}
+.btn-primary{
+    background-color: #007bff;
+
+}
+.btn-primary:hover{
+    background-color: #0E5BA3;
+}
+.btn-secondary{
+    color:black;
+    background-color: transparent;
+    border: solid 1px;
+}
+.btn-secondary:hover{
+    background-color: #ccc;
+}
+.btn-success{
+    background-color: #5cb85c;
+}
+.btn-success:hover{
+    background-color: #479C48;
+}
+.btn-info{
+    background-color: #5bc0de;
+}
+.btn-info:hover{
+    background-color: #3AB0D3;
+}
+.btn-warning{
+    background-color: #f0ad4e;
+}
+.btn-warning:hover{
+    background-color: #EA9632;
+}
+.btn-danger{
+    background-color: #d9534f;
+}
+.btn-danger:hover{
+    background-color: #D75452;
+}
+.btn-gray{
+    color:white;
+    background-color: rgb(81, 81, 85);
+}
+.btn-gray:hover{
+    background-color: rgb(128, 125, 127);
+}
+/*callouts*/
+.callout{
+    margin-top: 20px;
+    padding:10px;
+    border-radius:5px;
+    border:solid 1px transparent;
+}
+.callout-primary{
+    color#004085;
+    background-color: #cce5ff;
+    border-color:#b8daff;
+}
+.callout-secondary{
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
+.callout-success{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.callout-danger{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.callout-warning{
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.callout-info{
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+/*--------------IMAGES---------------*/
+img.img-fluid {
+    width: 100%; /*Force imgs to fit their parent element*/
+}
+img.img-rounded {
+    border-radius: 10px; /*Add rounded corners to imgs*/
+}
+img.img-cirle {
+    border-radius: 50%; /*Force a square image into a circle*/
+}
+img.img-shadow {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /*Add a suble drop shadow to an img*/
+}
+
+/*--------------RESPONSIVE NAVBAR---------------*/
+nav  {
+    background-color: black;
+    color: lightgrey;
+}
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 15px;
+    width: 100%;
+}
+nav a:hover {
+    color: white;
+}
+/*Navbar at md and lg screens*/
+@media only screen and (min-width: 500px){
+    nav span {
+        float: left;
+    }
+    nav ul {
+        float: right;
+    }
+    nav li {
+        float: left;
+    }
+}
+
+
+/*-------------LAYOUT---------------*/
+.container {
+    max-width: 1000px; /*Responsive Container*/
+    margin: auto;
+    padding: 0 10px; /*At smaller screens it's nice to not have it touching the edges*/
+}
+
+/*Rows*/
+.row::after { /*Build in clearfix into rows*/
+    content: "";
+    display: block;
+    clear: both;
+}
+.row {
+    margin: 0px -15px; /*Make flush with other content*/
+}
+
+/* Cols For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    padding: 0 15px;
+    float: left;
+}
+/* Cols For tablets: */
+@media only screen and (min-width: 500px) and (max-width:999px) {
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+}
+/* Cols For desktop: */
+@media only screen and (min-width: 1000px) {
+    .col-lg-1 {width: 8.33%;}
+    .col-lg-2 {width: 16.66%;}
+    .col-lg-3 {width: 25%;}
+    .col-lg-4 {width: 33.33%;}
+    .col-lg-5 {width: 41.66%;}
+    .col-lg-6 {width: 50%;}
+    .col-lg-7 {width: 58.33%;}
+    .col-lg-8 {width: 66.66%;}
+    .col-lg-9 {width: 75%;}
+    .col-lg-10 {width: 83.33%;}
+    .col-lg-11 {width: 91.66%;}
+    .col-lg-12 {width: 100%;}
+}
+footer{
+    text-align:center;
+    background-color: black;
+    color:white;
+    padding: 12px 15px;
+    bottom: 0;
+    width: 100%;
+    height:50px;
+
+}

@@ -1,0 +1,14 @@
+*create login system
+*known customers can Order
+*known admins can edit menu
+*fill up the menu from a .json (like the assign 5)
+*create a system where customer logins could add menu items to their Order
+*calculate total cost in the order
+*templatize pages
+
+
+
+plan atm:
+- page 1 = static aside from login
+- add to order either through on:hover or a button in the box
+- hide the button to add menu items unless specific login
