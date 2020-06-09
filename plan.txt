@@ -12,3 +12,8 @@ plan atm:
 - page 1 = static aside from login
 - add to order either through on:hover or a button in the box
 - hide the button to add menu items unless specific login
+
+
+check unsplash.com and pexels.com for sprites
+
+freepik is a option too but you need to cite in the code where you got it from
