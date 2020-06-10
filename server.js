@@ -10,7 +10,7 @@
 var path = require('path');
 var express = require('express');
 var express_hdbars = require('express-handlebars')
-var menudata = require('./menu')
+var menudata = require('./menuData')
 var single = true;
 
 
@@ -28,6 +28,10 @@ app.use(express.static('public'));
 
 app.get( '/', function (req, res, next){
   res.status(200).render('home');
+});
+
+app.get( '/menu', function (req, res, next){
+  res.status(200).render('menu', {allMenu: menudata});
 });
 
 // app.get( '/twits/:indexTwit', function (req, res, next){
