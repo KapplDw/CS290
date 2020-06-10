@@ -16,7 +16,7 @@ nav ul{
     padding:15px;
 }
 header{
-    background-image: url(https:/via.placeholder.com/1900x1250?text=bannerbg);
+    background-image: url(https://images.pexels.com/photos/1528013/pexels-photo-1528013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-size: cover;
     background-position: center center;
     /*padding replaces height*/
@@ -56,12 +56,39 @@ header h3{
     padding:30px;
     background-color: rgb(220, 220, 220);
 }
-#order{
-    text-align: center;
-    padding:20px;
+#menu img{
+    height: 300px;
+    width: 500px;
 }
-#order.box{
-    text-align: right;
+#menu .box{
+    width: 500px;
+
+}
+
+
+#order .orderhead{
+    text-align: center;
+    padding: 10px 0px;
+}
+
+#order .box h3{
+    float: right;
+    display: inline-block;
+    padding:0px 5px;
+}
+
+#order .box h2{
+    float: left;
+    display: inline-block;
+    padding:0px 5px;
+
+}
+
+#order .box{
+    border: solid 1px;
+    margin: 5px 0;
+    padding-bottom: 30px;
+
 }
 footer i.fa-circle{
     color:white;
