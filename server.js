@@ -11,6 +11,7 @@ var path = require('path');
 var express = require('express');
 var express_hdbars = require('express-handlebars')
 var menudata = require('./menuData')
+var orderdata = require('./orderData')
 var single = true;
 
 
@@ -32,6 +33,9 @@ app.get( '/', function (req, res, next){
 
 app.get( '/menu', function (req, res, next){
   res.status(200).render('menu', {allMenu: menudata});
+});
+app.get( '/order', function (req, res, next){
+  res.status(200).render('order', {allOrder: orderdata});
 });
 
 // app.get( '/twits/:indexTwit', function (req, res, next){
