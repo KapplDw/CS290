@@ -1,16 +1,24 @@
 // Adds event listener to sign in button
 window.addEventListener('DOMContentLoaded', function () {
     var menuItems_delete = document.getElementsByClassName('menu_item');
+    console.log(menuItems_delete);
+    if (menuItems_delete){
+        for (var i = 0; i < menuItems_delete.length; i++) {
+            menuItems_delete[i].addEventListener('click', removeItem);
+        };
+    }
 
-    for (var i = 0; i < menuItems_delete.length; i++) {
-        menuItems_delete[i].addEventListener('click', removeItem);
-    };
-
-    //var addItem = document.getElementById('create-item');
-    //addItem.addEventListener('click', showAddModal);
+    var addItem = document.getElementById('create-item');
+    console.log(addItem);
+    if(addItem){
+        addItem.addEventListener('click', showAddModal);
+    }
 
     var signIn = document.getElementsByClassName('sign');
-    signIn[i].addEventListener('click', signInPrompt);
+    console.log(signIn);
+    if (signIn){
+        signIn[0].addEventListener('click', signInPrompt);
+    }
 });
 
 

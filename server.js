@@ -38,16 +38,6 @@ app.get( '/order', function (req, res, next){
   res.status(200).render('order', {allOrder: orderdata});
 });
 
-// app.get( '/twits/:indexTwit', function (req, res, next){
-
-//   if(twitData[req.params.indexTwit]){
-//     res.status(200).render('home', {allTwits: [twitData[req.params.indexTwit]], button: 'single' }  );
-
-//   }
-//   else{
-//     next();
-//   }
-// });
 
 // app.get('*', function (req, res) {
 //   res.status(404).render('404');
