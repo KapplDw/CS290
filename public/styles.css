@@ -65,6 +65,10 @@ header h3{
 
 }
 
+.submit {
+    margin-bottom: 20px;
+}
+
 
 #order .orderhead{
     text-align: center;
@@ -90,18 +94,44 @@ header h3{
     padding-bottom: 30px;
 
 }
+
+/* Login modal */
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 footer i.fa-circle{
     color:white;
 }
+
 footer i.fa-stack-1x{
     color:black;
 }
+
 footer .apps{
     font-size: 3px;
 }
+
 footer a{
     color: #FEC013;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
 @media only screen and (min-width:1000px) {
     nav .nav-btn{
         display: none;
