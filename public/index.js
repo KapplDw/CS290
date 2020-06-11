@@ -6,31 +6,37 @@ window.addEventListener('DOMContentLoaded', function () {
         menuItems_delete[i].addEventListener('click', removeItem);
     };
 
-    var addItem = document.getElementById('create-item');
-    addItem.addEventListener('click', showAddModal);  
-    
+    //var addItem = document.getElementById('create-item');
+    //addItem.addEventListener('click', showAddModal);
+
     var signIn = document.getElementsByClassName('sign');
-    signIn.addEventListener('click', showButtons);
+    signIn[i].addEventListener('click', signInPrompt);
 });
 
 
 
 
 // Displays add/rm menu item button
-function showButtons(event){
-
+function signInPrompt(event){
+    var input = prompt("Please enter your username and password concatenated");
+    if(input == "jeffpassword" || input == "rock12345" || input == "robhess" ){
+        //show the modal
+        console.log("Access Granted.")
+    }
+    else{
+        console.log("Your entry was not a valid login, elevation denied.")
+    }
 };
 
 // Updates the page and back end data
 
-// Adds event listener on add button 
+// Adds event listener on add button
 function showAddModal(event){
 
 };
 
 
 // Adds event listener on rm button
-
 function removeItem(event){
     console.log("clicked");
 };

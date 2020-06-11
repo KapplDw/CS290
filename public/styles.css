@@ -36,6 +36,9 @@ header h3{
 }
 .btn-warning{
     background-color:#FEC013;
+    border: 0px;
+    font-family: inherit;
+    font-size: 25px;
 }
 #services{
     text-align: center;
@@ -46,7 +49,7 @@ header h3{
     margin-top: 20px;
 }
 #services .p-trans{
-    color:rgba(0, 0, 0, 0.2);
+    color:rgba(0, 0, 0, 0.6);
 }
 #services i.fa-circle{
     color:#FEC013;
