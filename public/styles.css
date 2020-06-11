@@ -40,6 +40,10 @@ header h3{
 #services{
     text-align: center;
     padding:20px;
+    margin-top: 20px;
+}
+#services .row{
+    margin-top: 20px;
 }
 #services .p-trans{
     color:rgba(0, 0, 0, 0.2);
@@ -68,7 +72,9 @@ header h3{
 .submit {
     margin-bottom: 20px;
 }
-
+.submit-btn{
+    text-align: center;
+}
 
 #order .orderhead{
     text-align: center;
@@ -87,29 +93,16 @@ header h3{
     padding:0px 5px;
 
 }
-
 #order .box{
     border: solid 1px;
     margin: 5px 0;
     padding-bottom: 30px;
-
 }
 
 /* Login modal */
 .hidden {
     display: none;
 }
-
-
-
-
-button {
-    font-size: 100px;
-}
-
-
-
-
 
 
 footer i.fa-circle{

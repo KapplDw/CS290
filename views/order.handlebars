@@ -1,0 +1,17 @@
+<section id="order">
+    <div class="container">
+
+    <div class="orderhead">
+        <h2>Your Current Order</h2>
+        <p class="p-trans">Please review your order before you submit.</p>
+    </div>
+
+        <div class="row">
+            {{#each allOrder}}
+            {{>order_item}}
+            {{/each}}
+        </div>
+    <div class="submit-btn">
+        <a href="#" class="btn btn-warning submit">Submit</a>
+    </div>
+</section>
