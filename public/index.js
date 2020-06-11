@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function () {
     //addItem.addEventListener('click', showAddModal);
 
     var signIn = document.getElementsByClassName('sign');
-    signIn[i].addEventListener('click', signInPrompt);
+    signIn[0].addEventListener('click', signInPrompt);
 });
 
 

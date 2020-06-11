@@ -1,9 +1,37 @@
 <section id="menu">
     <div class="container">
          <h2>MENU</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>Come see our fine collection of eats</p>
+        <button type="button" id="add-menu-item-button" class="hidden"><i class="fa fa-plus"></i></button>
+        <div id="modal-backdrop" class="hidden"></div>
+        <div id="add-menu-item-modal" class="hidden">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    <h3>Add a Menu Item</h3>
+                    <button type="button" class="modal-hide-button">&times</button>
+                </div>
+                <div class="modal-body">
+                    <div class="item_input_element">
+                        <label for="menu_item_photo_input">Menu Item Photo Url</label>
+                        <input type="text" id="menu_item_photo_input">
+                    </div>
+                    <div class="item_input_element">
+                        <label for="menu_item_name_input">Menu Item Name</label>
+                        <input type="text" id="menu_item_name_input">
+                    </div>
+                    <div class="item_input_element">
+                        <label for="menu_item_price_input">Menu Item Price</label>
+                        <input type="text" id="menu_item_price_input">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+                    <button type="button" id="modal-accept" class="action-button">Add Item</button>
+                </div>
+            </div>
+        </div>
         <div class="row">
-                
+
             {{#each allMenu}}
             {{> menu_item}}
             {{/each}}
@@ -13,7 +41,3 @@
 
     <button type="button" id="create-item" class="hidden">Add</button>
 </section>
-
-
-
-    
