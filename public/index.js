@@ -29,7 +29,10 @@ function signInPrompt(event){
     var input = prompt("Please enter your username and password concatenated");
     if(input == "jeffpassword" || input == "rock12345" || input == "robhess" ){
         //show the modal
-        console.log("Access Granted.")
+        var hidden = document.getElementsByClassName('hidden');
+        for(var i = 0; i < hidden.length; i++){
+            hidden[i].style.display = "inline";
+        }
     }
     else{
         console.log("Your entry was not a valid login, elevation denied.")

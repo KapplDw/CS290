@@ -104,7 +104,21 @@ header h3{
 
 /* Login modal */
 .hidden {
-    display: none;
+    /* display: none; */
+}
+
+.create-item {
+    color: #FEC013;
+    font-size: 100px;
+    background: none;
+    border: none;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.create-item:hover {
+    color: #EA9632;
 }
 
 

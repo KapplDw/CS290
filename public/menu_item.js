@@ -10,7 +10,7 @@ templates['menu_item'] = template({"compiler":[8,">= 4.3.0"],"main":function(con
 
   return "<div class=\" col-md-6 col-lg-6\">\n    <div class=\"box\">\n        <img src= "
     + alias4(((helper = (helper = lookupProperty(helpers,"picture") || (depth0 != null ? lookupProperty(depth0,"picture") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"picture","hash":{},"data":data,"loc":{"start":{"line":3,"column":18},"end":{"line":3,"column":29}}}) : helper)))
-    + " class=\"img-fluid\" alt=\"Picture of food.\">\n        <button type=\"button\" class=\"menu_item\">&times;</button>\n        <h3>"
+    + " class=\"img-fluid\" alt=\"Picture of food.\">\n        <button type=\"button\" class=\"menu_item hidden\">&times;</button>\n        <h3>"
     + alias4(((helper = (helper = lookupProperty(helpers,"name") || (depth0 != null ? lookupProperty(depth0,"name") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":5,"column":12},"end":{"line":5,"column":20}}}) : helper)))
     + "</h3>\n        <p>"
     + alias4(((helper = (helper = lookupProperty(helpers,"cost") || (depth0 != null ? lookupProperty(depth0,"cost") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cost","hash":{},"data":data,"loc":{"start":{"line":6,"column":11},"end":{"line":6,"column":19}}}) : helper)))
