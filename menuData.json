@@ -2,32 +2,32 @@
   {
     "picture": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=300&w=400",
     "name": "Burger",
-    "cost": "$11.25"
+    "cost": "$ 11.25"
   },
   {
     "picture": "https://images.pexels.com/photos/3052248/pexels-photo-3052248.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "name": "Hot Dog Meal",
-    "cost": "$7.50"
+    "cost": "$ 7.50"
   },
   {
     "picture": "https://images.pexels.com/photos/1352245/pexels-photo-1352245.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "name": "Ice Cream",
-    "cost": "$4.50"
+    "cost": "$ 4.50"
   },
   {
     "picture": "https://images.pexels.com/photos/1059943/pexels-photo-1059943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "name": "Chicken Wing Platter",
-    "cost": "$6.50"
+    "cost": "$ 6.50"
   },
   {
     "picture": "https://images.pexels.com/photos/806357/pexels-photo-806357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "name": "Famous Mac n Cheese",
-    "cost": "$5"
+    "cost": "$ 5"
   },
   {
     "picture": "https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "name": "Strawberry Milkshake",
-    "cost": "$3.50"
+    "cost": "$ 3.50"
   }
 
 ]

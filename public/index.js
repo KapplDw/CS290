@@ -1,35 +1,4 @@
-// Adds event listener to sign in button
-window.addEventListener('DOMContentLoaded', function () {
-    var menuItems_delete = document.getElementsByClassName('menu_item');
-    console.log(menuItems_delete);
-    if (menuItems_delete){
-        for (var i = 0; i < menuItems_delete.length; i++) {
-            menuItems_delete[i].addEventListener('click', removeItem);
-        };
-    }
 
-    var signIn = document.getElementsByClassName('sign');
-    if (signIn){
-        signIn[0].addEventListener('click', signInPrompt);
-    }
-
-    var addModal = document.getElementById('add-menu-item-button');
-    if (addModal){
-        addModal.addEventListener('click', showAddModal);
-    }
-
-    var modalClose = document.getElementsByClassName('modal-hide-button');
-    if (modalClose){
-        for(var i = 0; i < modalClose.length; i++){
-            modalClose[i].addEventListener('click', closeModal);
-        }
-    }
-
-    var addItem = document.getElementById('modal-accept');
-    if (addItem){
-        addItem.addEventListener('click', addItems);
-    }
-});
 
 
 
@@ -82,14 +51,11 @@ function closeModal(event){
 }
 
 function addItems(event){
-    console.log("clicked")
     var urls = document.querySelector('#menu_item_photo_input').value;
     var text = document.querySelector('#menu_item_name_input').value;
     var cost = document.querySelector('#menu_item_price_input').value;
     var location = window.location.pathname;
-    console.log(urls);
-    console.log(text);
-    console.log(cost);
+
 
     if(!urls || !text || !cost){
         alert("You must fill all fields!");
@@ -107,23 +73,28 @@ function addItems(event){
         request.setRequestHeader(
             'Content-Type',
             'application/json'
-          );
+        );
 
+        console.log("This is before event listener")
         request.addEventListener('load', function (event) {
-            if (event.target.status == 200){
-                var menu_item_template = Handlebars.templates.menu_item;
-                var new_item = menu_item_template({
+            console.log("This is in the event listener")
+            if (event.target.status === 200) {
+                var menuTemplate = Handlebars.templates.menu_item;
+                var newMenudHTML = menuTemplate({
                     picture: urls,
                     name: text,
-                    cost: '$'+ cost
+                    cost: '$ ' + cost
                 });
-                var menu_container = document.querySelector('.row');
-                menu_container.insertAdjacentHTML('beforeend', new_item);
-            }
-            else{
-                alert("Error storing data in database: " + event.target.response);
+                var menu_row = document.querySelector('.row');
+                menu_row.insertAdjacentHTML('beforeend', newMenuHTML);
+            } 
+            else {
+            alert("Error storing photo in database: " + event.target.response);
             }
         });
+  
+
+
 
         request.send(requestBody);
 
@@ -132,3 +103,36 @@ function addItems(event){
 
     }
 }
+
+// Adds event listener to sign in button
+window.addEventListener('DOMContentLoaded', function () {
+    var menuItems_delete = document.getElementsByClassName('menu_item');
+    console.log(menuItems_delete);
+    if (menuItems_delete){
+        for (var i = 0; i < menuItems_delete.length; i++) {
+            menuItems_delete[i].addEventListener('click', removeItem);
+        };
+    }
+
+    var signIn = document.getElementsByClassName('sign');
+    if (signIn){
+        signIn[0].addEventListener('click', signInPrompt);
+    }
+
+    var addModal = document.getElementById('add-menu-item-button');
+    if (addModal){
+        addModal.addEventListener('click', showAddModal);
+    }
+
+    var modalClose = document.getElementsByClassName('modal-hide-button');
+    if (modalClose){
+        for(var i = 0; i < modalClose.length; i++){
+            modalClose[i].addEventListener('click', closeModal);
+        }
+    }
+
+    var addItem = document.getElementById('modal-accept');
+    if (addItem){
+        addItem.addEventListener('click', addItems);
+    }
+});

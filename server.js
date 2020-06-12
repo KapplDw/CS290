@@ -42,10 +42,6 @@ app.get( '/order', function (req, res, next){
 
 
 app.post('/menu', function(req, res, next) {
-  // console.log(req.body);
-  // console.log(req.body.picture);
-  // console.log(req.body.name);
-  // console.log(req.body.cost);
 
   if(req.body && req.body.picture && req.body.name && req.body.cost){
     menudata.push({
