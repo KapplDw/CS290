@@ -12,6 +12,7 @@ function signInPrompt(event){
         for(var i = 0; i < hidden.length; i++){
             hidden[i].style.display = "inline";
         }
+        console.log("Elevation granted.")
     }
     else{
         console.log("Your entry was not a valid login, elevation denied.")
@@ -84,12 +85,12 @@ function addItems(event){
                 });
                 var menu_row = document.querySelector('.row');
                 menu_row.insertAdjacentHTML('beforeend', newMenuHTML);
-            } 
+            }
             else {
             alert("Error storing photo in database: " + event.target.response);
             }
         });
-  
+
 
 
 
