@@ -50,7 +50,6 @@ app.post('/menu', function(req, res, next) {
       cost: req.body.cost
     });
     res.status(200);
-    console.log(menudata);
   }
   else{
     res.status(400);

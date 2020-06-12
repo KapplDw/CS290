@@ -22,7 +22,6 @@ function signInPrompt(event){
 
 // Adds event listener on add button
 function showAddModal(event){
-    console.log("Add item");
     var modal = document.getElementById('add-menu-item-modal');
     var modalbg = document.getElementById('modal-backdrop');
     modal.style.display = "inline";
@@ -32,11 +31,10 @@ function showAddModal(event){
 
 // Adds event listener on rm button
 function removeItem(event){
-    console.log("clicked");
+    console.log("Remove Item was clicked");
 };
 
 function closeModal(event){
-    console.log("closed");
     var modal = document.getElementById('add-menu-item-modal');
     var modalbg = document.getElementById('modal-backdrop');
     modal.style.display = "none";
@@ -107,7 +105,6 @@ function addItems(event){
 // Adds event listener to sign in button
 window.addEventListener('DOMContentLoaded', function () {
     var menuItems_delete = document.getElementsByClassName('menu_item');
-    console.log(menuItems_delete);
     if (menuItems_delete){
         for (var i = 0; i < menuItems_delete.length; i++) {
             menuItems_delete[i].addEventListener('click', removeItem);
