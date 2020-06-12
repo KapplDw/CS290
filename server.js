@@ -24,6 +24,7 @@ app.engine('handlebars', express_hdbars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
+app.use(express.json());
 
 // Displays homepage with all twits loaded
 
@@ -38,6 +39,27 @@ app.get( '/order', function (req, res, next){
   res.status(200).render('order', {allOrder: orderdata});
 });
 
+
+
+app.post('/menu', function(req, res, next) {
+  // console.log(req.body);
+  // console.log(req.body.picture);
+  // console.log(req.body.name);
+  // console.log(req.body.cost);
+
+  if(req.body && req.body.picture && req.body.name && req.body.cost){
+    menudata.push({
+      picture: req.body.picture,
+      name: req.body.name,
+      cost: req.body.cost
+    });
+    res.status(200);
+    console.log(menudata);
+  }
+  else{
+    res.status(400);
+  }
+})
 
 // app.get('*', function (req, res) {
 //   res.status(404).render('404');

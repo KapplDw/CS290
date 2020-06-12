@@ -105,7 +105,7 @@ header h3{
 
 /* Login modal */
 .hidden {
-    /* display: none; */
+    display: none;
 }
 
 .create-item {
