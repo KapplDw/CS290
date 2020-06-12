@@ -57,9 +57,9 @@ app.post('/menu', function(req, res, next) {
   }
 })
 
-// app.get('*', function (req, res) {
-//   res.status(404).render('404');
-// });
+app.get('*', function (req, res) {
+  res.status(404).render('404');
+});
 
 app.listen(port, function () {
   console.log("== Server is listening on port", port);
