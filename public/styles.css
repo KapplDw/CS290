@@ -107,9 +107,19 @@ header h3{
 .hidden {
     display: none;
 }
-
 .four0four{
-    font-size: 100px;
+    background-color: #333;
+    padding: 50px 0px;
+    border-radius: 10px;
+
+}
+.four0four h2{
+    font-size: 150px;
+    color: white;
+}
+.four0four h3{
+    color: white;
+
 }
 
 .create-item {
