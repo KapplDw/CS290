@@ -15,7 +15,6 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     var signIn = document.getElementsByClassName('sign');
-    console.log(signIn);
     if (signIn){
         signIn[0].addEventListener('click', signInPrompt);
     }
