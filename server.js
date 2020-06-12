@@ -52,7 +52,7 @@ app.post('/menu', function(req, res, next) {
     res.status(200).send("Photo added successfully");
   }
   else{
-    res.status(400);
+    res.status(400).send("error");
   }
 })
 
