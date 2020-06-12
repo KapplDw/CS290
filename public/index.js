@@ -73,12 +73,11 @@ function addItems(event){
             'application/json'
         );
 
-        console.log("This is before event listener")
+
         request.addEventListener('load', function (event) {
-            console.log("This is in the event listener")
             if (event.target.status === 200) {
                 var menuTemplate = Handlebars.templates.menu_item;
-                var newMenudHTML = menuTemplate({
+                var newMenuHTML = menuTemplate({
                     picture: urls,
                     name: text,
                     cost: '$ ' + cost

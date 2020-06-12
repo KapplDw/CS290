@@ -49,7 +49,7 @@ app.post('/menu', function(req, res, next) {
       name: req.body.name,
       cost: req.body.cost
     });
-    res.status(200);
+    res.status(200).send("Photo added successfully");
   }
   else{
     res.status(400);
